@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gorik: tabsSwitch</title>
+  <!--[if IE 9]><meta http-equiv="X-UA-Compatible" content="IE=9"><![endif]-->
+  <!--[if IE 8]><meta http-equiv="X-UA-Compatible" content="IE=8"><![endif]-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="format-detection" content="telephone=no">
+  <link href="css/styles.css" rel="stylesheet">
+  <!--[if IE 9]><link rel="stylesheet" href="css/ie9.css" type="text/css"><![endif]-->
+  <!--[if lte IE 8]><link rel="stylesheet" href="css/ie.css" type="text/css"><script src="js/html5shiv.js"></script><![endif]-->
+</head>
+<body>
+
+<div class="main" id="top">
+
+  <header>
+    <div class="wrapper clearfix">
+      <a href="http://egor-podgayskiy.moikrug.ru/" rel="nofollow" class="profile"><i class="icon"></i>Мой Круг</a>
+      <a href="http://www.linkedin.com/pub/egor-podgaiski/5b/9ba/977/en" rel="nofollow" class="profile"><i class="icon"></i>LinkedIn</a>
+      <a href="http://gorik.name" title="домашняя страница Горика" class="logo">I Am...</a>
+    </div>
+  </header>
+
+  <div class="content">
+    <div class="wrapper">
+
+      <h1>Gorik: jQuery tabsSwitch</h1>
+
+      <section class="js_tabs">
+        <div class="tabs_wrap">
+          <div class="tabs">
+            <span class="tab_lnk js_tab_btn current" data-target-id="item_descr">Описание</span>
+            <span class="tab_lnk js_tab_btn" data-target-id="item_how">Подключение</span>
+            <span class="tab_lnk js_tab_btn" data-target-id="item_params">Параметры</span>
+            <span class="tab_lnk js_tab_btn" data-target-id="item_downld">Ресурсы</span>
+          </div>
+        </div>
+
+        <div class="tabs_content_area js_tabs_content">
+          <div id="item_descr" class="tabs_content current" style="display:block;">
+            <div class="text">
+              <p>Небольшой скрипт для анимированного переключения табов на странице.</p>
+            </div>
+          </div><!-- tabs_content EOF -->
+
+          <div id="item_how" class="tabs_content">
+            <div class="text">
+              <ul>
+                <li>Подключаем библиотеку jQuery 1.10.0+</li>
+                <li>Добавляем фунцию из файла <a href="js/tabs.switch.js">tabs.switch.js</a></li>
+                <li>Проставляем классы в HTML:<br>
+                    &nbsp;<i>.js_tabs</i> - область действия скрипта<br>
+                    &nbsp;<i>.js_tab_btn</i> - кнопка переключения таба<br>
+                    &nbsp;<i>.js_tabs_content</i> - область с контентом для каждой кнопки
+                </li>
+                <li>Прописываем атрибут для каждой кнопки: <br>
+                    &nbsp;<i>data-target-id="target_item_ID"</i>, где 'target_item_ID' - это ID блока с контентом для этой кнопки</li>
+                <li>Запускаем скрипт на странице:<br>
+  <pre>
+    $('document').ready(function(){
+       tabsSwitch();
+    });</pre>
+                </li>
+                <li>Прописываем стили для табов (есть в примере в <a href="css/styles.css">css/styles.css</a>).<br>
+                  <span class="gray">* Я не особо люблю инлайнить стили скриптом, посему все стили прописаны ручками в css (выделено /*THIS CSS*/)</span>
+                </li>
+              </ul>
+            </div>
+          </div><!-- tabs_content EOF -->
+
+          <div id="item_params" class="tabs_content">
+            <div class="text">
+              <p><b>data-target-id="target_item_ID"</b> - 'target_item_ID' - это ID блока с контентом для этой кнопки.</p>
+              <p><b>tbsDuration</b> - переменная в скрипте, отвечает за скорость анимации в ms.</p>
+            </div>
+          </div><!-- tabs_content EOF -->
+
+          <div id="item_downld" class="tabs_content">
+            <div class="text">
+              <p>Файл JS <a href="js/tabs.switch.js">tabs.switch.js</a></p>
+              <p>Файл CSS (только стили для .select) <a href="css/styles.css">styles.css</a></p>
+            </div>
+          </div><!-- tabs_content EOF -->
+
+        </div>
+      </section>
+
+      <section>
+        <h2>Описание:</h2>
+
+        <p>Небольшой скрипт для анимированного переключения табов на странице.</p>
+      </section>
+
+      <section>
+        <h2>Подключение:</h2>
+
+        <ul>
+          <li>Подключаем библиотеку jQuery 1.10.0+</li>
+          <li>Добавляем фунцию из файла <a href="js/tabs.switch.js">tabs.switch.js</a></li>
+          <li>Проставляем классы в HTML:<br>
+              &nbsp;<i>.js_tabs</i> - область действия скрипта<br>
+              &nbsp;<i>.js_tab_btn</i> - кнопка переключения таба<br>
+              &nbsp;<i>.js_tabs_content</i> - область с контентом для каждой кнопки
+          </li>
+          <li>Прописываем атрибут для каждой кнопки: <br>
+              &nbsp;<i>data-target-id="target_item_ID"</i>, где 'target_item_ID' - это ID блока с контентом для этой кнопки</li>
+          <li>Запускаем скрипт на странице:<br>
+  <pre>
+    $('document').ready(function(){
+       tabsSwitch();
+    });</pre>
+          </li>
+          <li>Прописываем стили для табов (есть в примере в <a href="css/styles.css">css/styles.css</a>).<br>
+            <span class="gray">* Я не особо люблю инлайнить стили скриптом, посему все стили прописаны ручками в css (выделено /*THIS CSS*/)</span>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Параметры:</h2>
+
+        <p><b>data-target-id="target_item_ID"</b> - 'target_item_ID' - это ID блока с контентом для этой кнопки.</p>
+        <p><b>tbsDuration</b> - переменная в скрипте, отвечает за скорость анимации в ms.</p>
+      </section>
+
+      <section>
+        <h2>Ресурсы:</h2>
+
+        <p>Файл JS <a href="js/tabs.switch.js">tabs.switch.js</a></p>
+        <p>Файл CSS (только стили для .select) <a href="css/styles.css">styles.css</a></p>
+      </section>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="wrapper clearfix">
+
+      <div class="creater">Creater: <a href="http://www.gorik.name/" target="_blank">I am ...</a></div>
+      <div class="copy">&copy; This is footer</div>
+
+    </div>
+  </footer>
+
+</div>
+
+<script src="js/jquery-1.10.0.min.js"></script>
+<script src="js/tabs.switch.js"></script>
+<script>
+  $('document').ready(function(){
+    tabsSwitch();
+  });
+</script>
+
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16569331-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>
